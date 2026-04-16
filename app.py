@@ -1,28 +1,3 @@
-""" from fastapi import FastAPI
-import joblib
-import numpy as np
-
-app = FastAPI()
-
-model = joblib.load("model/model.pkl")
-
-@app.get("/")
-def home():
-    return {"message": "ML API is running"}
-
-@app.post("/predict")
-def predict(income: float, age: int):
-    data = np.array([[income, age]])
-    prediction = model.predict(data)[0]
-    
-    return {
-        "income": income,
-        "age": age,
-        "prediction": int(prediction)
-    } """
-
-#Better API structure (clean code)
-
 from fastapi import FastAPI
 from pydantic import BaseModel
 import joblib
